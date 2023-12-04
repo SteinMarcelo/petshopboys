@@ -1,4 +1,5 @@
 
+import Usuario.ListagemUsuario;
 import Usuario.TelaCadastroUsuario;
 import java.awt.Graphics;
 
@@ -33,11 +34,13 @@ public class TelaSistema extends javax.swing.JFrame {
     private void initComponents() {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenuBarSistema = new javax.swing.JMenuBar();
         jMenuCadastros = new javax.swing.JMenu();
-        jMenuCadastroCliente = new javax.swing.JMenu();
-        jMenuCadastroServicos = new javax.swing.JMenu();
-        jMenuCadastroUsuarios = new javax.swing.JMenu();
+        jMenuUsuarios = new javax.swing.JMenu();
+        jMenuItemCadastroUsuario = new javax.swing.JMenuItem();
+        jMenuItem3ListagemUsuario = new javax.swing.JMenuItem();
         jMenuAtendimento = new javax.swing.JMenu();
         jMenuCobranca = new javax.swing.JMenu();
         JmenuCaixa = new javax.swing.JMenu();
@@ -53,24 +56,34 @@ public class TelaSistema extends javax.swing.JFrame {
             .addGap(0, 316, Short.MAX_VALUE)
         );
 
+        jMenuItem1.setText("jMenuItem1");
+
+        jMenuItem2.setText("jMenuItem2");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("TelaPrincipal"); // NOI18N
 
         jMenuCadastros.setText("Cadastros");
 
-        jMenuCadastroCliente.setText("Clientes");
-        jMenuCadastros.add(jMenuCadastroCliente);
+        jMenuUsuarios.setText("Usuarios");
 
-        jMenuCadastroServicos.setText("Serviços");
-        jMenuCadastros.add(jMenuCadastroServicos);
-
-        jMenuCadastroUsuarios.setText("Usuários");
-        jMenuCadastroUsuarios.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemCadastroUsuario.setText("Novo");
+        jMenuItemCadastroUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuCadastroUsuariosActionPerformed(evt);
+                jMenuItemCadastroUsuarioActionPerformed(evt);
             }
         });
-        jMenuCadastros.add(jMenuCadastroUsuarios);
+        jMenuUsuarios.add(jMenuItemCadastroUsuario);
+
+        jMenuItem3ListagemUsuario.setText("Listagem");
+        jMenuItem3ListagemUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ListagemUsuarioActionPerformed(evt);
+            }
+        });
+        jMenuUsuarios.add(jMenuItem3ListagemUsuario);
+
+        jMenuCadastros.add(jMenuUsuarios);
 
         jMenuBarSistema.add(jMenuCadastros);
 
@@ -100,10 +113,15 @@ public class TelaSistema extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuCadastroUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCadastroUsuariosActionPerformed
-    TelaCadastroUsuario TUsuario = new TelaCadastroUsuario();
+    private void jMenuItemCadastroUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadastroUsuarioActionPerformed
+        TelaCadastroUsuario TUsuario = new TelaCadastroUsuario();
         TUsuario.setVisible(true);
-    }//GEN-LAST:event_jMenuCadastroUsuariosActionPerformed
+    }//GEN-LAST:event_jMenuItemCadastroUsuarioActionPerformed
+
+    private void jMenuItem3ListagemUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ListagemUsuarioActionPerformed
+        ListagemUsuario TLUsuario = new ListagemUsuario();
+        TLUsuario.setVisible(true);
+    }//GEN-LAST:event_jMenuItem3ListagemUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -116,7 +134,7 @@ public class TelaSistema extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -145,10 +163,12 @@ public class TelaSistema extends javax.swing.JFrame {
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jMenuAtendimento;
     private javax.swing.JMenuBar jMenuBarSistema;
-    private javax.swing.JMenu jMenuCadastroCliente;
-    private javax.swing.JMenu jMenuCadastroServicos;
-    private javax.swing.JMenu jMenuCadastroUsuarios;
     private javax.swing.JMenu jMenuCadastros;
     private javax.swing.JMenu jMenuCobranca;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3ListagemUsuario;
+    private javax.swing.JMenuItem jMenuItemCadastroUsuario;
+    private javax.swing.JMenu jMenuUsuarios;
     // End of variables declaration//GEN-END:variables
 }
