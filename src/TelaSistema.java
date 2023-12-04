@@ -1,3 +1,9 @@
+
+import Usuario.TelaCadastroUsuario;
+import java.awt.Graphics;
+
+
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -16,7 +22,7 @@ public class TelaSistema extends javax.swing.JFrame {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
     }
-
+  
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,28 +35,42 @@ public class TelaSistema extends javax.swing.JFrame {
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBarSistema = new javax.swing.JMenuBar();
         jMenuCadastros = new javax.swing.JMenu();
-        jMenuCadastro = new javax.swing.JMenu();
+        jMenuCadastroCliente = new javax.swing.JMenu();
+        jMenuCadastroServicos = new javax.swing.JMenu();
+        jMenuCadastroUsuarios = new javax.swing.JMenu();
         jMenuAtendimento = new javax.swing.JMenu();
         jMenuCobranca = new javax.swing.JMenu();
-        jMenu1 = new javax.swing.JMenu();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        JmenuCaixa = new javax.swing.JMenu();
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 622, Short.MAX_VALUE)
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
+            .addGap(0, 316, Short.MAX_VALUE)
         );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName("TelaPrincipal"); // NOI18N
 
         jMenuCadastros.setText("Cadastros");
 
-        jMenuCadastro.setText("Cadastro");
-        jMenuCadastros.add(jMenuCadastro);
+        jMenuCadastroCliente.setText("Clientes");
+        jMenuCadastros.add(jMenuCadastroCliente);
+
+        jMenuCadastroServicos.setText("Serviços");
+        jMenuCadastros.add(jMenuCadastroServicos);
+
+        jMenuCadastroUsuarios.setText("Usuários");
+        jMenuCadastroUsuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuCadastroUsuariosActionPerformed(evt);
+            }
+        });
+        jMenuCadastros.add(jMenuCadastroUsuarios);
 
         jMenuBarSistema.add(jMenuCadastros);
 
@@ -59,8 +79,8 @@ public class TelaSistema extends javax.swing.JFrame {
 
         jMenuCobranca.setText("Cobrança");
 
-        jMenu1.setText("jMenu1");
-        jMenuCobranca.add(jMenu1);
+        JmenuCaixa.setText("Caixa");
+        jMenuCobranca.add(JmenuCaixa);
 
         jMenuBarSistema.add(jMenuCobranca);
 
@@ -70,15 +90,20 @@ public class TelaSistema extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGap(0, 622, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addGap(0, 316, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuCadastroUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCadastroUsuariosActionPerformed
+    TelaCadastroUsuario TUsuario = new TelaCadastroUsuario();
+        TUsuario.setVisible(true);
+    }//GEN-LAST:event_jMenuCadastroUsuariosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -116,11 +141,13 @@ public class TelaSistema extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu JmenuCaixa;
     private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenuAtendimento;
     private javax.swing.JMenuBar jMenuBarSistema;
-    private javax.swing.JMenu jMenuCadastro;
+    private javax.swing.JMenu jMenuCadastroCliente;
+    private javax.swing.JMenu jMenuCadastroServicos;
+    private javax.swing.JMenu jMenuCadastroUsuarios;
     private javax.swing.JMenu jMenuCadastros;
     private javax.swing.JMenu jMenuCobranca;
     // End of variables declaration//GEN-END:variables
