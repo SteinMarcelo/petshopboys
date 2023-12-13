@@ -3,10 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Aluno%20TDS/Documents/Marcelo/petshopboys/src/Usuario/ListagemUsuario.java</file>
-            <file>file:/C:/Users/Aluno%20TDS/Documents/Marcelo/petshopboys/src/TelaSistema.java</file>
-            <file>file:/C:/Users/Aluno%20TDS/Documents/Marcelo/petshopboys/src/Usuario/Usuario.java</file>
-            <file>file:/C:/Users/Aluno%20TDS/Documents/Marcelo/petshopboys/src/Usuario/TelaCadastroUsuario.java</file>
+            <file>file:/C:/Users/marce/Documents/Java/Petshop/src/Cliente/Cliente.java</file>
+            <file>file:/C:/Users/marce/Documents/Java/Petshop/src/Cliente/InterfaceClientes.java</file>
+            <file>file:/C:/Users/marce/Documents/Java/Petshop/src/Usuario/Usuario.java</file>
+            <file>file:/C:/Users/marce/Documents/Java/Petshop/src/TelaSistema.java</file>
+            <file>file:/C:/Users/marce/Documents/Java/Petshop/src/Cliente/TelaCadastroClientes.java</file>
+            <file>file:/C:/Users/marce/Documents/Java/Petshop/src/Usuario/InterfaceUsuarios.java</file>
         </group>
     </open-files>
 </project-private>
